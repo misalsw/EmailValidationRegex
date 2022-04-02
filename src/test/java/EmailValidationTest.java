@@ -10,4 +10,11 @@ class EmailValidationTest {
         assertTrue(email.validEmail("abc.123"));
         assertTrue(email.validEmail("Swapnil.77"));
     }
+
+    @Test
+    public void EmailValidationItShouldReturnValidOrNotaddsymbolat() {
+        EmailValidation email = new EmailValidation();
+        assertTrue(email.validemail("abc.xyz@BridgeLabz"));
+        assertTrue(email.validemail("Swapnil.256@BridgeLabz"));
+    }
 }
