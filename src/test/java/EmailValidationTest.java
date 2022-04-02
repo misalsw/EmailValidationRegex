@@ -17,4 +17,19 @@ class EmailValidationTest {
         assertTrue(email.validemail("abc.xyz@BridgeLabz"));
         assertTrue(email.validemail("Swapnil.256@BridgeLabz"));
     }
+
+    @Test
+    public void EmailValidationItShouldReturnValidOrNotaddDotSymbol() {
+        EmailValidation email = new EmailValidation();
+        assertTrue(email.validemail("abc.xyz@BridgeLabz.in"));
+        assertTrue(email.validemail("Swapnil.256@BridgeLabz"));
+    }
+
+    @Test
+    public void EmailValidationItShouldReturnValidOrNotaddoptionalpart() {
+        EmailValidation email = new EmailValidation();
+        assertTrue(email.validemail("abc.xyz@BridgeLabz.org.in"));
+        assertTrue(email.validemail("Swapnil.256@BridgeLabz.com.in"));
+
+    }
 }
